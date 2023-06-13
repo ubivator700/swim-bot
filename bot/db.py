@@ -5,8 +5,8 @@ from mysql.connector import connect, Error
 
 
 def get_connection():
-    connection = pymysql.connect(host="localhost",
-                                 user="admin",
+    connection = pymysql.connect(host="wim-db",
+                                 user="root",
                                  password="root",
                                  db="swim_shot",
                                  charset="utf8",
@@ -15,7 +15,7 @@ def get_connection():
 
 def f_connection():
     f_conn = connect(
-        host="localhost",
+        host="wim-db",
         user="admin",
         password="babyor123",
     )
