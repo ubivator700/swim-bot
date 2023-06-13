@@ -1,0 +1,25 @@
+host="Database host address:NekitaSuruj.mysql.pythonanywhere-services.com",
+user="NekitaSuruj",
+password="babyor_123",
+db="NekitaSuruj$default",
+
+
+
+CREATE DATABASE swim_shot;
+
+CREATE TABLE swim_bot (
+    id INT NOT NULL AUTO_INCREMENT,
+    user_id varchar(256),
+    position varchar(256),
+    name varchar(256),
+    adult varchar(256),
+    pool varchar(256),
+    type varchar(256),
+    age varchar(256),
+    trainer varchar(256),
+    phone varchar(256),
+    PRIMARY KEY(id)
+);
+
+
+'IF NOT EXISTS (SELECT * FROM sys.databases WHERE name = "swim_shot")\nBEGIN\nCREATE DATABASE swim_shot;\nEND;\nGO'
