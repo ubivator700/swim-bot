@@ -5,7 +5,7 @@ from mysql.connector import connect, Error
 
 
 def get_connection():
-    connection = pymysql.connect(host="wim-db",
+    connection = pymysql.connect(host="swim-db",
                                  user="root",
                                  password="root",
                                  db="swim_shot",
