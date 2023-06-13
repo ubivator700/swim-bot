@@ -7,7 +7,7 @@ from mysql.connector import connect, Error
 def get_connection():
     connection = pymysql.connect(host="localhost",
                                  user="admin",
-                                 password="babyor123",
+                                 password="root",
                                  db="swim_shot",
                                  charset="utf8",
                                  cursorclass=pymysql.cursors.DictCursor)
