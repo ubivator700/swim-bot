@@ -16,8 +16,8 @@ def get_connection():
 def f_connection():
     f_conn = connect(
         host="swim-db",
-        user="admin",
-        password="babyor123",
+        user="root",
+        password="root",
     )
     return f_conn
 
