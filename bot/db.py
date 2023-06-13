@@ -15,7 +15,7 @@ def get_connection():
 
 def f_connection():
     f_conn = connect(
-        host="wim-db",
+        host="swim-db",
         user="admin",
         password="babyor123",
     )
