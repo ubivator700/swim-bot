@@ -7,7 +7,7 @@ services:
         environment:
             MYSQL_ROOT_PASSWORD: root
     app:
-        container_name: app
+        container_name: swim-app
         links:
             - "db"
         build: ./bot
