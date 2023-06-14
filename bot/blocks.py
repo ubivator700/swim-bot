@@ -18,7 +18,7 @@ def kid_adult(user_data):
     if user_data['msg_text'] == 'Для ребёнка':
         db.set_adult(user_data['user_id'], 'kid')
         db.set_position(user_data['user_id'], 'kid-pool')
-        worker.send_msg(user_data['user_id'], keyboard=keyboards.kid_pool_keyboard, botmessage='Выбери бассейн:\n\n\n👉Бассейн Swim Shot с 3 лет персонально, с 6 – в группу (Зеленоград, к1801)\n\n👉СК «Орбита» для детей 2-6 лет (Зеленоград, Озёрная аллея, 6)')
+        worker.send_msg(user_data['user_id'], keyboard=keyboards.kid_pool_keyboard, botmessage='Выбери бассейн:\n\n\n👉Бассейн Swim Shot с 3 лет персонально, с 6 лет – в группу (Зеленоград, к1801)\n\n👉СК «Орбита» для детей 2-6 лет (Зеленоград, Озёрная аллея, 6)')
     elif user_data['msg_text'] == 'Для взрослого':
         db.set_adult(user_data['user_id'], 'adult')
         db.set_position(user_data['user_id'], 'adult-pool')

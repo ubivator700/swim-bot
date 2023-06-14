@@ -10,7 +10,7 @@ from vk_api.keyboard import VkKeyboard, VkKeyboardColor
 #             self.add_button(item)
 #         self.add_button('Назад', color=VkKeyboardColor.NEGATIVE)
         
-kid_pool_buttons = ['Бассейн Swim Shot', 'Бассейн Анкор', 'СК «Орбита»']
+kid_pool_buttons = ['Бассейн Swim Shot', 'СК «Орбита»']
 
 # empty_kb = VkKeyboard(one_time=True)
 # empty_kb.add_button('1')
@@ -29,7 +29,6 @@ adult_keyboard.add_button('Для взрослого')
 
 kid_pool_keyboard = VkKeyboard(one_time=False)
 kid_pool_keyboard.add_button('Бассейн Swim Shot')
-kid_pool_keyboard.add_button('Бассейн Анкор')
 kid_pool_keyboard.add_button('СК «Орбита»')
 kid_pool_keyboard.add_line()
 kid_pool_keyboard.add_button('Назад', color=VkKeyboardColor.NEGATIVE)
@@ -109,7 +108,6 @@ signup_keyboard.add_button('Назад', color=VkKeyboardColor.NEGATIVE)
 
 adult_pool_keyboard = VkKeyboard(one_time=False)
 adult_pool_keyboard.add_button('Бассейн Swim Shot')
-adult_pool_keyboard.add_button('Бассейн Анкор')
 adult_pool_keyboard.add_button('Назад', color=VkKeyboardColor.NEGATIVE)
 
 adult_type_keyboard = VkKeyboard(one_time=False)
