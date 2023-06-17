@@ -1,14 +1,5 @@
 from vk_api.keyboard import VkKeyboard, VkKeyboardColor
 
-
-# class keybmaker(VkKeyboard):
-#     def __init__(self):
-#         pass
-#     one_time=False
-#     def make(self, buttons):
-#         for item in buttons:
-#             self.add_button(item)
-#         self.add_button('Назад', color=VkKeyboardColor.NEGATIVE)
         
 kid_pool_buttons = ['Бассейн Swim Shot', 'СК «Орбита»']
 
