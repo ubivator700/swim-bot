@@ -145,7 +145,7 @@ def kid_phone(user_data):
 #В З Р О С Л Ы Е
 def adult_pool(user_data):
     db.set_pool(user_data['user_id'], user_data['msg_text'])
-    worker.send_msg(user_data['user_id'], keyboard=keyboards.adult_type_keyboard ,botmessage='Выбери направление')
+    worker.send_msg(user_data['user_id'], keyboard=keyboards.adult_type_keyboard ,botmessage='Выбери направление:\n\n👉Групповые тренировки\n👉Здоровая спина\n👉Аквааэробика\n👉Свободное плавание\n👉Персональные тренировки')
     db.set_position(user_data['user_id'], 'adult-type')
 
 
