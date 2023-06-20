@@ -66,12 +66,12 @@ trainer_keyboard_kid_group_shot_6x8.add_button('Назад', color=VkKeyboardCol
 trainer_keyboard_kid_group_shot_9x12 = VkKeyboard(one_time=False)
 trainer_keyboard_kid_group_shot_9x12.add_button('Илья')
 trainer_keyboard_kid_group_shot_9x12.add_button('Любовь')
-trainer_keyboard_kid_group_shot_6x8.add_line()
+trainer_keyboard_kid_group_shot_9x12.add_line()
 trainer_keyboard_kid_group_shot_9x12.add_button('Анна')
 trainer_keyboard_kid_group_shot_9x12.add_button('Александра')
-trainer_keyboard_kid_group_shot_6x8.add_line()
-trainer_keyboard_kid_group_shot_6x8.add_button('Выбрать тренера', color=VkKeyboardColor.POSITIVE)
-trainer_keyboard_kid_group_shot_6x8.add_button('Назад', color=VkKeyboardColor.NEGATIVE)
+trainer_keyboard_kid_group_shot_9x12.add_line()
+trainer_keyboard_kid_group_shot_9x12.add_button('Выбрать тренера', color=VkKeyboardColor.POSITIVE)
+trainer_keyboard_kid_group_shot_9x12.add_button('Назад', color=VkKeyboardColor.NEGATIVE)
 
 
 trainer_keyboard_kid_group_shot_13x17 = VkKeyboard(one_time=False)
