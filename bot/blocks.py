@@ -215,7 +215,7 @@ def adult_trainer(user_data):
             keyb = keyboards.trainer_keyboard_adult_personal
         else:
             worker.send_msg(user_data['user_id'], 'Не понимаю, лучше пользуйтесь кнопками')
-        worker.send_msg(user_data['user_id'], photo=ph, keyboard=keyb)
+        worker.send_msg(user_data['user_id'], photo=ph, keyboard=keyboards.trainer_keyboard_adult_personal)
         db.set_trainer(user_data['user_id'], user_data['msg_text'])
     elif user_data['msg_text'] == 'Выбрать тренера':
         worker.send_msg(user_data['user_id'], keyboard=keyboards.confirm_keyb, botmessage='Хочешь выбрать тренера '+str(db.get_trainer(user_data['user_id']))+'?')
