@@ -37,7 +37,7 @@ def kid_pool(user_data):
     elif user_data['msg_text'] == 'СК «Орбита»':
         db.set_pool(user_data['user_id'], user_data['msg_text'])
         db.set_position(user_data['user_id'], 'kid-type')
-        worker.send_msg(user_data['user_id'], keyboard=keyboards.trainer_keyboard_kid_group_orbita_2x6, botmessage='Выбери направление:\n\n\n👉Групповые тренировки по плаванию (в группе ДО 8 человек на одного Тренера, в – среднем 5-7 человек)')
+        worker.send_msg(user_data['user_id'], keyboard=keyboards.kid_type_keyboard, botmessage='Выбери направление:\n\n\n👉Групповые тренировки по плаванию (в группе ДО 8 человек на одного Тренера, в – среднем 5-7 человек)')
     else:
         worker.send_msg(user_data['user_id'], 'Не понимаю, лучше пользуйтесь кнопками')
 
@@ -101,9 +101,18 @@ def kid_age(user_data):
 
 def kid_group_trainer(user_data):
     ph = None
-    if user_data['msg_text'] == 'Илья' or user_data['msg_text'] == 'Александра' or user_data['msg_text'] == 'Дарья' or user_data['msg_text'] == 'Сергей' or user_data['msg_text'] == 'Любовь' or user_data['msg_text'] == 'Владимир' or user_data['msg_text'] == 'Александр Д.' or user_data['msg_text'] == 'Александр А.':
+    kb = keyboards.trainer_keyboard_adult_personal
+    if user_data['user_pool'] == 'СК «Орбита»':
+        kb = keyboards.trainer_keyboard_kid_group_orbita_2x6
+    if user_data['user_pool'] == 'Бассейн Swim Shot' and user_data['user_age'] == '6-8':
+        kb = keyboards.trainer_keyboard_kid_group_shot_6x8
+    if user_data['user_pool'] == 'Бассейн Swim Shot' and user_data['user_age'] == '9-12':
+        kb = keyboards.trainer_keyboard_kid_group_shot_9x12
+    if user_data['user_pool'] == 'Бассейн Swim Shot' and user_data['user_age'] == '13-17':
+        kb = keyboards.trainer_keyboard_kid_group_shot_13x17
+    if user_data['msg_text'] == 'Илья' or user_data['msg_text'] == 'Александра' or user_data['msg_text'] == 'Дарья' or user_data['msg_text'] == 'Сергей' or user_data['msg_text'] == 'Любовь' or user_data['msg_text'] == 'Владимир' or user_data['msg_text'] == 'Александр Д.' or user_data['msg_text'] == 'Александр А.' or user_data['msg_text'] == 'Анна':
         ph = photos[user_data['msg_text']]
-        worker.send_msg(user_data['user_id'], photo=ph, keyboard=keyboards.trainer_keyboard_kid_personal)
+        worker.send_msg(user_data['user_id'], photo=ph, keyboard=kb)
         db.set_trainer(user_data['user_id'], user_data['msg_text'])
     elif user_data['msg_text'] == 'Выбрать тренера':
         worker.send_msg(user_data['user_id'], keyboard=keyboards.confirm_keyb, botmessage='Хочешь выбрать тренера '+db.get_trainer(user_data['user_id'])+'?')
@@ -211,7 +220,7 @@ def adult_day(user_data):
 
 def adult_trainer(user_data):
     ph = None
-    if user_data['msg_text'] == 'Илья' or user_data['msg_text'] == 'Александра' or user_data['msg_text'] == 'Дарья' or user_data['msg_text'] == 'Сергей' or user_data['msg_text'] == 'Любовь' or user_data['msg_text'] == 'Владимир' or user_data['msg_text'] == 'Александр Д.' or user_data['msg_text'] == 'Александр А.':
+    if user_data['msg_text'] == 'Илья' or user_data['msg_text'] == 'Александра' or user_data['msg_text'] == 'Дарья' or user_data['msg_text'] == 'Сергей' or user_data['msg_text'] == 'Любовь' or user_data['msg_text'] == 'Владимир' or user_data['msg_text'] == 'Александр Д.' or user_data['msg_text'] == 'Александр А.' or user_data['msg_text'] == 'Анна':
         ph = photos[user_data['msg_text']]
         if user_data['kid_type'] == 'Групповые тренировки':
             keyb = keyboards.trainer_keyboard_adult_personal
