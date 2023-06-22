@@ -31,6 +31,11 @@ kid_type_keyboard.add_button('Свободное плавание')
 kid_type_keyboard.add_line()
 kid_type_keyboard.add_button('Назад', color=VkKeyboardColor.NEGATIVE)
 
+kid_type_keyboard_orbita = VkKeyboard(one_time=False)
+kid_type_keyboard_orbita.add_button('Групповые')
+kid_type_keyboard_orbita.add_line()
+kid_type_keyboard_orbita.add_button('Назад', color=VkKeyboardColor.NEGATIVE)
+
 kid_age_k18_keyboard = VkKeyboard(one_time=False)
 kid_age_k18_keyboard.add_button('6-8')
 kid_age_k18_keyboard.add_button('9-12')

@@ -37,7 +37,7 @@ def kid_pool(user_data):
     elif user_data['msg_text'] == 'СК «Орбита»':
         db.set_pool(user_data['user_id'], user_data['msg_text'])
         db.set_position(user_data['user_id'], 'kid-type')
-        worker.send_msg(user_data['user_id'], keyboard=keyboards.kid_type_keyboard, botmessage='Выбери направление:\n\n\n👉Групповые тренировки по плаванию (в группе ДО 8 человек на одного Тренера, в – среднем 5-7 человек)')
+        worker.send_msg(user_data['user_id'], keyboard=keyboards.kid_type_keyboard_orbita, botmessage='Выбери направление:\n\n\n👉Групповые тренировки по плаванию (в группе ДО 8 человек на одного Тренера, в – среднем 5-7 человек)')
     else:
         worker.send_msg(user_data['user_id'], 'Не понимаю, лучше пользуйтесь кнопками')
 
