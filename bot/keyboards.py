@@ -191,5 +191,5 @@ phone_keyb = VkKeyboard(one_time=False)
 phone_keyb.add_button('Подтвердить', color=VkKeyboardColor.POSITIVE)
 phone_keyb.add_button('Ввести заново')
 
-end_keyb = VkKeyboard(one_time=False)
+end_keyb = VkKeyboard(one_time=True)
 end_keyb.add_button('Новая заявка', color=VkKeyboardColor.PRIMARY)
