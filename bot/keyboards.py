@@ -180,7 +180,7 @@ schedule_keyb.add_button('Расписание 🗓️')
 schedule_keyb.add_button('Назад', color=VkKeyboardColor.NEGATIVE)
 
 introd_keyb = VkKeyboard(one_time=False)
-introd_keyb.add_button('Познакомь с тренером 👋🏻')
+introd_keyb.add_button('Познакомь с Тренером 👋🏻')
 introd_keyb.add_button('Назад', color=VkKeyboardColor.NEGATIVE)
 
 confirm_keyb = VkKeyboard(one_time=False)
