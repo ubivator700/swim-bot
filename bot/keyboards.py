@@ -119,7 +119,7 @@ trainer_keyboard_adult_group.add_button('Назад', color=VkKeyboardColor.NEGA
 
 trainer_keyboard_adult_group_evn = VkKeyboard(one_time=False)
 trainer_keyboard_adult_group_evn.add_button('Дарья')
-trainer_keyboard_adult_group_evn.add_button('Илья')
+trainer_keyboard_adult_group_evn.add_button('Анна')
 trainer_keyboard_adult_group_evn.add_button('Александра')
 trainer_keyboard_adult_group_evn.add_line()
 trainer_keyboard_adult_group_evn.add_button('Выбрать Тренера', color=VkKeyboardColor.POSITIVE)
