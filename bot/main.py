@@ -42,17 +42,10 @@ def bot():
                 event_data = event.message
                 threading.Thread(target=proccess.p_message, args=(event_data,)).start()
 
-if __name__ == '__main__':
-    # Exception = exceptions.ApiError
-    arr = [1,2]
-    for i in arr:
-        try:
-            bot()
-        except Exception as e:
-            print('\n\n---BOT EXEPTION---\n\n')
-            print(e)
-            print('\n\n---END OF EXEPTION---\n\n')
-            continue
-        arr.append(1)
-        print(arr)
-
+while __name__ == '__main__':
+    try:
+        bot()
+    except Exception as e:
+        print('\n\n---BOT EXEPTION---\n\n')
+        print(e)
+        print('\n\n---END OF EXEPTION---\n\n')
